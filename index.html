@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#171717">
+<title>Cut and Cards — Marketing HQ</title>
+<style>
+:root{--bg:#f5f6f8;--panel:#fff;--ink:#17191d;--muted:#707784;--line:#e6e8ec;--dark:#191b20;--accent:#d5f36a;--green:#16794b;--amber:#946200;--red:#b42318;--radius:18px}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.shell{display:grid;grid-template-columns:250px minmax(0,1fr);min-height:100vh}.sidebar{background:var(--dark);color:white;padding:25px 16px;display:flex;flex-direction:column;gap:25px}.brand{display:flex;align-items:center;gap:12px;padding:0 7px}.logo{background:var(--accent);color:#17191d;width:43px;height:43px;border-radius:14px;display:grid;place-items:center;font-size:22px;font-weight:900}.brand strong{display:block;letter-spacing:.04em;font-size:14px}.brand small{color:#b7bbc4;letter-spacing:.12em;font-size:10px}.nav{display:grid;gap:7px}.nav button{border:0;background:transparent;color:#c4c7cf;text-align:left;padding:12px 13px;border-radius:11px;display:flex;gap:12px;align-items:center}.nav button.active,.nav button:hover{background:#30333a;color:white}.nav .ico{width:21px;text-align:center}.sidebar-note{margin-top:auto;color:#aeb3bd;font-size:12px;border-top:1px solid #393c43;padding:16px 7px 0}.main{min-width:0;padding:28px clamp(16px,3vw,38px) 45px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:25px}.eyebrow{font-size:11px;letter-spacing:.13em;color:var(--muted);font-weight:750;text-transform:uppercase}.topbar h1{margin:3px 0 0;font-size:clamp(24px,3vw,32px);letter-spacing:-.04em}.top-actions{display:flex;align-items:center;gap:9px}.btn{border:1px solid var(--line);background:white;padding:10px 14px;border-radius:11px;font-weight:650;color:var(--ink)}.btn.primary{background:var(--dark);color:white;border-color:var(--dark)}.btn:disabled{opacity:.45;cursor:not-allowed}.status-pill{display:inline-flex;align-items:center;gap:7px;padding:6px 10px;border-radius:100px;font-size:12px;font-weight:700;background:#fff4d7;color:#775600}.dot{width:7px;height:7px;border-radius:50%;background:#d69b12}.banner{background:#fff8e8;border:1px solid #f1dfae;border-radius:14px;padding:13px 16px;display:flex;gap:10px;align-items:flex-start;margin-bottom:22px;font-size:13px;color:#684c00}.banner strong{display:block;margin-bottom:2px}.page{display:none}.page.active{display:block}.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:24px 0 13px}.section-head h2{font-size:18px;margin:0;letter-spacing:-.025em}.section-head p{color:var(--muted);font-size:13px;margin:4px 0 0}.grid{display:grid;gap:14px}.stats{grid-template-columns:repeat(4,minmax(0,1fr))}.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:19px;min-width:0}.stat-label{color:var(--muted);font-size:12px;font-weight:650}.stat-number{font-size:29px;letter-spacing:-.05em;font-weight:800;margin:9px 0 3px}.stat-foot{color:var(--muted);font-size:12px}.stat-icon{float:right;background:#f0f1f4;border-radius:10px;width:34px;height:34px;display:grid;place-items:center}.two-col{grid-template-columns:minmax(0,1.5fr) minmax(260px,1fr)}.chart-wrap{height:230px;position:relative}.chart-wrap canvas{width:100%;height:100%}.legend{display:flex;gap:15px;flex-wrap:wrap;font-size:12px;color:var(--muted)}.legend span:before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:#252830;margin-right:6px}.platform-list,.activity-list{display:grid;gap:13px}.platform{display:flex;align-items:center;gap:11px}.platform-icon{width:39px;height:39px;border-radius:12px;background:#f1f2f5;display:grid;place-items:center;font-weight:800}.platform-info{flex:1;min-width:0}.platform-info strong{display:block;font-size:13px}.platform-info small{color:var(--muted);font-size:11px}.tag{display:inline-block;padding:5px 8px;border-radius:100px;font-size:11px;font-weight:750;background:#eef0f3;color:#5e6570}.tag.green{background:#e2f7eb;color:#17623c}.tag.amber{background:#fff2d1;color:#805a00}.tag.red{background:#ffe8e6;color:#a42c23}.table-wrap{overflow:auto}.table{width:100%;border-collapse:collapse;min-width:650px}.table th{text-align:left;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.08em;padding:12px 10px;border-bottom:1px solid var(--line)}.table td{padding:14px 10px;border-bottom:1px solid var(--line);font-size:13px;vertical-align:middle}.table tr:last-child td{border-bottom:0}.platform-cell{display:flex;align-items:center;gap:8px;font-weight:700}.small-btn{border:1px solid var(--line);background:white;border-radius:8px;padding:7px 9px;font-size:12px;font-weight:700}.empty{padding:34px 15px;text-align:center;color:var(--muted)}.empty .big{font-size:27px;margin-bottom:8px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:grid;gap:7px}.field label{font-size:12px;font-weight:750;color:#4d535d}.field input,.field select,.field textarea{border:1px solid var(--line);border-radius:10px;padding:11px 12px;background:#fff;width:100%;color:var(--ink)}.field textarea{min-height:120px;resize:vertical}.field.full{grid-column:1/-1}.draft-card{border:1px solid var(--line);border-radius:14px;padding:15px;display:grid;gap:12px}.draft-top{display:flex;justify-content:space-between;gap:12px}.draft-card p{white-space:pre-wrap;margin:0;font-size:14px}.draft-actions{display:flex;gap:8px;flex-wrap:wrap}.check{display:flex;gap:10px;align-items:flex-start}.check input{margin-top:4px}.notice{padding:12px;border-radius:12px;background:#f0f2f5;color:#525966;font-size:12px}.footer{margin-top:35px;color:var(--muted);font-size:11px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.mobile-brand{display:none}
+@media(max-width:900px){.shell{grid-template-columns:1fr}.sidebar{padding:14px;gap:13px}.brand{padding:0}.nav{display:flex;overflow:auto;gap:5px}.nav button{white-space:nowrap;padding:10px}.sidebar-note{display:none}.main{padding-top:20px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.two-col{grid-template-columns:1fr}}
+@media(max-width:540px){.topbar{align-items:flex-start;flex-direction:column}.top-actions{width:100%}.top-actions .btn{flex:1}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.card{padding:15px}.stat-number{font-size:25px}.stats{gap:9px}}
+</style>
+</head>
+<body>
+<div class="shell">
+<aside class="sidebar">
+ <div class="brand"><div class="logo">C<span style="font-size:13px">&</span>C</div><div><strong>CUT AND CARDS</strong><small>MARKETING HQ</small></div></div>
+ <nav class="nav" aria-label="Dashboard sections">
+  <button class="active" data-page="overview"><span class="ico">▦</span> Overview</button>
+  <button data-page="analytics"><span class="ico">⌁</span> Analytics</button>
+  <button data-page="calendar"><span class="ico">▣</span> Post calendar</button>
+  <button data-page="approvals"><span class="ico">✓</span> Approval centre</button>
+  <button data-page="platforms"><span class="ico">◎</span> Platforms</button>
+  <button data-page="settings"><span class="ico">⚙</span> Settings & limits</button>
+ </nav>
+ <div class="sidebar-note">Peninsula Shopping Complex<br>#03-27 · Singapore<br><br>Organic-first marketing · Free tools only</div>
+</aside>
+<main class="main">
+ <header class="topbar">
+  <div><div class="eyebrow">Your salon, all in one place</div><h1 id="pageTitle">Marketing overview</h1></div>
+  <div class="top-actions"><span class="status-pill"><span class="dot"></span> Demo mode · Not synced</span><button class="btn" id="refreshBtn">↻ Refresh status</button></div>
+ </header>
+ <div class="banner" id="globalNotice"><span>ⓘ</span><div><strong>Prototype only — live account data is not connected here.</strong>Figures and scheduled posts below are sample data to demonstrate the interface. No posts are scheduled, approved, or published by this file.</div></div>
+
+ <section class="page active" id="overview">
+  <div class="grid stats">
+   <div class="card"><span class="stat-icon">◉</span><div class="stat-label">Total reach</div><div class="stat-number">—</div><div class="stat-foot">Connect a data source to load</div></div>
+   <div class="card"><span class="stat-icon">♡</span><div class="stat-label">Engagements</div><div class="stat-number">—</div><div class="stat-foot">Likes, comments, shares</div></div>
+   <div class="card"><span class="stat-icon">▤</span><div class="stat-label">Posts scheduled</div><div class="stat-number" id="scheduledCount">0</div><div class="stat-foot">Local drafts only</div></div>
+   <div class="card"><span class="stat-icon">✓</span><div class="stat-label">Awaiting review</div><div class="stat-number" id="approvalCount">0</div><div class="stat-foot">Drafts in this browser</div></div>
+  </div>
+  <div class="section-head"><div><h2>Performance at a glance</h2><p>Chart will populate when a real analytics source is connected.</p></div><span class="tag">No live data</span></div>
+  <div class="grid two-col">
+   <div class="card"><div class="section-head" style="margin-top:0"><div><h2>Engagement trend</h2><p>Illustrative empty state</p></div><select id="overviewPeriod" class="small-btn" aria-label="Period"><option>7 days</option><option>30 days</option><option>90 days</option></select></div><div class="chart-wrap"><canvas id="overviewChart" aria-label="Engagement chart"></canvas></div><div class="legend"><span>No connected series</span></div></div>
+   <div class="card"><div class="section-head" style="margin-top:0"><div><h2>Platform connections</h2><p>Previously linked via Metricool; refresh externally to verify</p></div></div><div class="platform-list" id="platformMini"></div></div>
+  </div>
+  <div class="section-head"><div><h2>Next actions</h2><p>Plan content without publishing automatically.</p></div></div>
+  <div class="grid two-col">
+   <div class="card"><h3 style="margin-top:0">Prepare a post batch</h3><p style="color:var(--muted);font-size:13px">Create drafts for English-owned channels or Burmese-language community content.</p><button class="btn primary" data-goto="approvals">Open approval centre →</button></div>
+   <div class="card"><h3 style="margin-top:0">Review schedule</h3><p style="color:var(--muted);font-size:13px">View draft ideas saved in this browser. These are not synced to Metricool.</p><button class="btn" data-goto="calendar">Open post calendar →</button></div>
+  </div>
+ </section>
+
+ <section class="page" id="analytics">
+  <div class="section-head" style="margin-top:0"><div><h2>Analytics</h2><p>Real metrics require a secure live data connection.</p></div><select id="analyticsPeriod" class="small-btn"><option>Last 7 days</option><option>Last 30 days</option><option>Last 90 days</option></select></div>
+  <div class="grid stats">
+   <div class="card"><div class="stat-label">Reach / views</div><div class="stat-number">—</div><div class="stat-foot">No live data source</div></div>
+   <div class="card"><div class="stat-label">Likes</div><div class="stat-number">—</div><div class="stat-foot">No live data source</div></div>
+   <div class="card"><div class="stat-label">Comments</div><div class="stat-number">—</div><div class="stat-foot">No live data source</div></div>
+   <div class="card"><div class="stat-label">Profile actions</div><div class="stat-number">—</div><div class="stat-foot">No live data source</div></div>
+  </div>
+  <div class="grid two-col" style="margin-top:14px">
+   <div class="card"><h2 style="margin-top:0">Reach over time</h2><div class="chart-wrap"><canvas id="reachChart"></canvas></div><div class="notice">No chart values are fabricated. A real data integration must supply dates and numeric metrics.</div></div>
+   <div class="card"><h2 style="margin-top:0">Compare platforms</h2><div class="platform-list" id="analyticsPlatforms"></div><div class="notice" style="margin-top:15px">Metric definitions differ across networks. Compare like-for-like metrics only.</div></div>
+  </div>
+ </section>
+
+ <section class="page" id="calendar">
+  <div class="section-head" style="margin-top:0"><div><h2>Post calendar</h2><p>Locally saved draft ideas only. No external schedule has been changed.</p></div><button class="btn primary" data-goto="approvals">+ New draft</button></div>
+  <div class="card"><div class="grid" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:17px"><div class="notice"><b id="calDraftCount">0</b><br>Local drafts</div><div class="notice"><b>0</b><br>Verified scheduled</div><div class="notice"><b>Manual</b><br>Publishing approval</div></div>
+   <div class="table-wrap"><table class="table"><thead><tr><th>Content</th><th>Platform</th><th>Proposed date</th><th>Status</th><th>Action</th></tr></thead><tbody id="calendarRows"></tbody></table></div>
+   <div id="calendarEmpty" class="empty"><div class="big">▣</div><b>No draft ideas yet</b><p>Create a draft in the approval centre to see it here.</p></div>
+  </div>
+ </section>
+
+ <section class="page" id="approvals">
+  <div class="section-head" style="margin-top:0"><div><h2>Approval centre</h2><p>Drafts are saved only in this browser until you export them.</p></div><span class="tag amber">Nothing auto-publishes</span></div>
+  <div class="grid two-col">
+   <div class="card"><h2 style="margin-top:0">Create content draft</h2><form id="draftForm" class="form-grid">
+    <div class="field"><label for="draftPlatform">Platform</label><select id="draftPlatform" required><option>Facebook</option><option>Instagram</option><option>TikTok</option><option>Google Business Profile</option><option>Facebook Group (manual review)</option></select></div>
+    <div class="field"><label for="draftLanguage">Language</label><select id="draftLanguage"><option>English</option><option>Burmese</option></select></div>
+    <div class="field"><label for="draftDate">Proposed date</label><input id="draftDate" type="date"></div>
+    <div class="field"><label for="draftTime">Proposed time (SGT)</label><input id="draftTime" type="time" value="12:00"></div>
+    <div class="field full"><label for="draftCaption">Caption</label><textarea id="draftCaption" placeholder="Write your caption here…" required></textarea></div>
+    <div class="field full"><label for="draftNotes">Internal notes (optional)</label><input id="draftNotes" placeholder="Creative idea, photo needed, CTA…"></div>
+    <div class="field full"><button class="btn primary" type="submit">Save draft for review</button></div>
+   </form></div>
+   <div class="card"><h2 style="margin-top:0">Before approval</h2><div class="activity-list">
+    <div class="check"><input type="checkbox" id="checkCaption"><label for="checkCaption"><b>Caption checked</b><br><span style="color:var(--muted);font-size:12px">Spelling, offer terms and contact details are correct.</span></label></div>
+    <div class="check"><input type="checkbox" id="checkMedia"><label for="checkMedia"><b>Media checked</b><br><span style="color:var(--muted);font-size:12px">Correct logo/photo; permissions confirmed.</span></label></div>
+    <div class="check"><input type="checkbox" id="checkTiming"><label for="checkTiming"><b>Timing checked</b><br><span style="color:var(--muted);font-size:12px">Date and Singapore time zone confirmed.</span></label></div>
+   </div><div class="notice" style="margin-top:20px">This checklist is a local review aid. It does not schedule, publish, or approve anything on a social platform.</div></div>
+  </div>
+  <div class="section-head"><div><h2>Draft queue</h2><p>Review, edit or export the current browser's drafts.</p></div><button class="btn" id="exportBtn">Export JSON</button></div>
+  <div id="draftQueue" class="grid" style="gap:10px"></div><div id="draftEmpty" class="empty card"><div class="big">✓</div><b>You're all caught up</b><p>No local drafts waiting for review.</p></div>
+ </section>
+
+ <section class="page" id="platforms">
+  <div class="section-head" style="margin-top:0"><div><h2>Platform status</h2><p>Connection status is not checked by this static file.</p></div><button class="btn" id="platformRefresh">Check integration notes</button></div>
+  <div id="platformCards" class="grid" style="grid-template-columns:repeat(2,minmax(0,1fr))"></div>
+  <div class="card" style="margin-top:14px"><h2 style="margin-top:0">Facebook Groups</h2><span class="tag amber">Manual support not verified</span><p style="color:var(--muted);font-size:13px">Group access and posting permissions vary. Keep group posts in draft until each group's rules and posting access are verified.</p></div>
+ </section>
+
+ <section class="page" id="settings">
+  <div class="section-head" style="margin-top:0"><div><h2>Settings & integration limits</h2><p>Designed to keep the project on a zero-cost path.</p></div></div>
+  <div class="grid two-col">
+   <div class="card"><h2 style="margin-top:0">Business details</h2><div class="activity-list">
+    <div><div class="eyebrow">Business</div><b>Cut and Cards</b></div>
+    <div><div class="eyebrow">Address</div><b>Peninsula Shopping Complex, #03-27, 3 Coleman Street, Singapore 179804</b></div>
+    <div><div class="eyebrow">WhatsApp</div><b>89695691</b></div>
+    <div><div class="eyebrow">Opening hours</div><b>Daily 10am–8pm; closed for Christmas and Chinese New Year holidays</b></div>
+   </div><p style="color:var(--muted);font-size:12px">Stored as reference content only; this page does not update your public business profiles.</p></div>
+   <div class="card"><h2 style="margin-top:0">Integration checklist</h2><div class="activity-list">
+    <div><span class="tag green">UI ready</span> Responsive dashboard interface</div>
+    <div><span class="tag green">UI ready</span> Local draft queue and JSON export</div>
+    <div><span class="tag amber">Not connected</span> Live Metricool analytics and schedule API</div>
+    <div><span class="tag amber">Not deployed</span> Public website hosting</div>
+    <div><span class="tag amber">Not configured</span> Secure backend / authentication</div>
+   </div></div>
+  </div>
+  <div class="card" style="margin-top:14px"><h2 style="margin-top:0">Privacy and cost guardrails</h2><ul style="color:var(--muted);padding-left:20px"><li>No API keys or passwords should be put in this HTML file.</li><li>No ad spend, paid APIs, paid trials or domain purchase are required for this prototype.</li><li>Free-tier hosting availability, limits and terms must be checked before deployment.</li><li>Public access is not safe for private business analytics unless authentication and a secure backend are configured.</li><li>All external publishing must be separately approved by the owner.</li></ul></div>
+ </section>
+ <footer class="footer"><span>Cut and Cards Marketing HQ · Prototype</span><span>Data: not connected · Actions: local only</span></footer>
+</main>
+</div>
+<script>
+const platformData=[
+ {name:"Facebook",symbol:"f",detail:"Page metrics and scheduled posts via connected provider",status:"Needs live verification"},
+ {name:"Instagram",symbol:"◎",detail:"Profile metrics and scheduled posts via connected provider",status:"Needs live verification"},
+ {name:"TikTok",symbol:"♪",detail:"Video metrics and scheduled posts via connected provider",status:"Needs live verification"},
+ {name:"Google Business Profile",symbol:"G",detail:"Profile metrics and photo / post management",status:"Needs live verification"}
+];
+const titles={overview:"Marketing overview",analytics:"Performance analytics",calendar:"Post calendar",approvals:"Approval centre",platforms:"Platform status",settings:"Settings & integration limits"};
+const $=id=>document.getElementById(id);
+function navigate(page){document.querySelectorAll(".page").forEach(x=>x.classList.toggle("active",x.id===page));document.querySelectorAll(".nav button").forEach(x=>x.classList.toggle("active",x.dataset.page===page));$("pageTitle").textContent=titles[page]||"Marketing HQ";window.scrollTo({top:0,behavior:"smooth"});}
+document.querySelectorAll("[data-page]").forEach(b=>b.addEventListener("click",()=>navigate(b.dataset.page)));
+document.querySelectorAll("[data-goto]").forEach(b=>b.addEventListener("click",()=>navigate(b.dataset.goto)));
+function platformRow(p){return `<div class="platform"><div class="platform-icon">${p.symbol}</div><div class="platform-info"><strong>${p.name}</strong><small>${p.detail}</small></div><span class="tag amber">Unverified</span></div>`}
+$("platformMini").innerHTML=platformData.map(platformRow).join("");
+$("analyticsPlatforms").innerHTML=platformData.map(platformRow).join("");
+$("platformCards").innerHTML=platformData.map(p=>`<div class="card"><div class="platform" style="margin-bottom:13px"><div class="platform-icon">${p.symbol}</div><div class="platform-info"><strong>${p.name}</strong><small>${p.status}</small></div></div><p style="font-size:13px;color:var(--muted)">${p.detail}</p><span class="tag amber">Connection needs verification</span></div>`).join("");
+function emptyChart(id){const c=$(id);if(!c)return;const ctx=c.getContext("2d");const dpr=window.devicePixelRatio||1;const w=c.clientWidth,h=c.clientHeight;c.width=w*dpr;c.height=h*dpr;ctx.scale(dpr,dpr);ctx.clearRect(0,0,w,h);ctx.strokeStyle="#e8eaee";ctx.lineWidth=1;for(let i=0;i<4;i++){let y=18+i*(h-40)/3;ctx.beginPath();ctx.moveTo(10,y);ctx.lineTo(w-10,y);ctx.stroke()}ctx.fillStyle="#8a909b";ctx.font="12px system-ui";ctx.textAlign="center";ctx.fillText("Connect analytics to display verified data",w/2,h/2);ctx.fillText("No sample values shown",w/2,h/2+20)}
+function drawCharts(){emptyChart("overviewChart");emptyChart("reachChart")}window.addEventListener("resize",drawCharts);setTimeout(drawCharts,50);
+let drafts=[];try{drafts=JSON.parse(localStorage.getItem("ccMarketingDrafts")||"[]")}catch(e){drafts=[]}
+function saveDrafts(){try{localStorage.setItem("ccMarketingDrafts",JSON.stringify(drafts))}catch(e){}renderDrafts()}
+function escapeHtml(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function renderDrafts(){
+ $("scheduledCount").textContent="0";$("approvalCount").textContent=drafts.length;$("calDraftCount").textContent=drafts.length;
+ $("draftEmpty").style.display=drafts.length?"none":"block";
+ $("draftQueue").innerHTML=drafts.map(d=>`<div class="draft-card"><div class="draft-top"><div><b>${escapeHtml(d.platform)}</b> <span class="tag amber">Draft · Not published</span><div style="color:var(--muted);font-size:12px;margin-top:5px">${escapeHtml(d.language)} · ${escapeHtml(d.date||"Date not set")} ${escapeHtml(d.time||"")}</div></div><button class="small-btn" data-delete="${d.id}">Delete</button></div><p>${escapeHtml(d.caption)}</p>${d.notes?`<div style="font-size:12px;color:var(--muted)">Notes: ${escapeHtml(d.notes)}</div>`:""}<div class="draft-actions"><button class="small-btn" data-edit="${d.id}">Edit</button><button class="small-btn" data-copy="${d.id}">Copy caption</button><span class="tag">Local browser only</span></div></div>`).join("");
+ $("calendarEmpty").style.display=drafts.length?"none":"block";
+ $("calendarRows").innerHTML=drafts.map(d=>`<tr><td>${escapeHtml(d.caption.slice(0,70))}${d.caption.length>70?"…":""}</td><td>${escapeHtml(d.platform)}</td><td>${escapeHtml(d.date||"Not set")} ${escapeHtml(d.time||"")}</td><td><span class="tag amber">Draft only</span></td><td><button class="small-btn" data-edit="${d.id}">Edit</button></td></tr>`).join("");
+ $("draftQueue").querySelectorAll("[data-delete]").forEach(b=>b.onclick=()=>{drafts=drafts.filter(d=>d.id!==b.dataset.delete);saveDrafts()});
+ $("draftQueue").querySelectorAll("[data-edit]").forEach(b=>b.onclick=()=>{const d=drafts.find(x=>x.id===b.dataset.edit);if(!d)return;$("draftPlatform").value=d.platform;$("draftLanguage").value=d.language;$("draftDate").value=d.date;$("draftTime").value=d.time;$("draftCaption").value=d.caption;$("draftNotes").value=d.notes||"";drafts=drafts.filter(x=>x.id!==d.id);saveDrafts();navigate("approvals");window.scrollTo({top:0,behavior:"smooth"})});
+ $("draftQueue").querySelectorAll("[data-copy]").forEach(b=>b.onclick=async()=>{const d=drafts.find(x=>x.id===b.dataset.copy);if(d){try{await navigator.clipboard.writeText(d.caption);b.textContent="Copied"}catch(e){alert("Copy is unavailable in this browser. Select the caption manually.")}}});
+}
+$("draftForm").addEventListener("submit",e=>{e.preventDefault();drafts.unshift({id:Date.now().toString(36),platform:$("draftPlatform").value,language:$("draftLanguage").value,date:$("draftDate").value,time:$("draftTime").value,caption:$("draftCaption").value.trim(),notes:$("draftNotes").value.trim(),created:new Date().toISOString()});saveDrafts();$("draftForm").reset();$("draftTime").value="12:00";$("checkCaption").checked=$("checkMedia").checked=$("checkTiming").checked=false;});
+$("exportBtn").addEventListener("click",()=>{const blob=new Blob([JSON.stringify({project:"Cut and Cards Marketing HQ",exportedAt:new Date().toISOString(),notice:"Local draft export only; not a live Metricool schedule.",drafts},null,2)],{type:"application/json"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="cut-and-cards-marketing-drafts.json";a.click();URL.revokeObjectURL(url)});
+$("refreshBtn").addEventListener("click",()=>alert("This standalone prototype has no live Metricool or platform API connection. Nothing has been refreshed externally. To enable live data, configure a secure backend and authorized connection first."));
+$("platformRefresh").addEventListener("click",()=>alert("This file cannot verify account connections. Connect a secure data source before relying on platform status."));
+renderDrafts();
+</script>
+</body>
+</html>
